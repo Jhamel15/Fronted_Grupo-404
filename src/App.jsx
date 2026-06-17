@@ -1,13 +1,13 @@
 import { Routes, Route, Navigate } from 'react-router-dom'
-import Layout from './components/Layout'
+import Layout from './components/Layout/Layout'
 
-import Estado from './pages/Estado'
-import Meses from './pages/Meses'
-import Oficinas from './pages/Oficinas'
-import OrganismosFinancieros from './pages/OrganismosFinancieros'
-import Usuarios from './pages/Usuarios'
-import TiposBaja from './pages/TiposBaja'
-import Departamentos from './pages/Departamentos'
+import Estado from './pages/Estado/Estado'
+import Meses from './pages/Meses/Meses'
+import Oficinas from './pages/Oficinas/Oficinas'
+import OrganismosFinancieros from './pages/OrganismosFinacieros/OrganismosFinancieros'
+import Usuarios from './pages/Usuarios/Usuarios'
+import TiposBaja from './pages/TiposBaja/TiposBaja'
+import Departamentos from './pages/Departamentos/Departamentos'
 
 import './App.css'
 

@@ -1,0 +1,25 @@
+.top-bar {
+  background: #222;
+  color: white;
+  font-weight: bold;
+  padding: 4px 8px;
+  font-size: 14px;
+}
+
+.banner {
+  height: 90px;
+  background: linear-gradient(to right, #1b5f99, #0d6fa8, #2c8ac0);
+  color: white;
+  padding: 15px 40px;
+  border-bottom: 1px solid #555;
+}
+
+.logo-text {
+  font-size: 38px;
+  font-weight: bold;
+  letter-spacing: 6px;
+}
+
+.subtitle {
+  font-size: 16px;
+}
