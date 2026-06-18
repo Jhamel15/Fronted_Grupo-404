@@ -1,25 +1,94 @@
+.header {
+  width: 100%;
+}
+
 .top-bar {
-  background: #222;
+  background: #202020;
   color: white;
   font-weight: bold;
-  padding: 4px 8px;
+  padding: 5px 10px;
   font-size: 14px;
 }
 
 .banner {
-  height: 90px;
-  background: linear-gradient(to right, #1b5f99, #0d6fa8, #2c8ac0);
+  height: 105px;
+  background: linear-gradient(135deg, #00518d, #0b75b7, #003b68);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 35px;
   color: white;
-  padding: 15px 40px;
-  border-bottom: 1px solid #555;
+  border-bottom: 2px solid #9fc5e8;
 }
 
-.logo-text {
-  font-size: 38px;
-  font-weight: bold;
-  letter-spacing: 6px;
+.brand-section {
+  display: flex;
+  align-items: center;
+  gap: 25px;
 }
 
-.subtitle {
-  font-size: 16px;
+.flag-shape {
+  width: 95px;
+  height: 55px;
+  background: linear-gradient(
+    to bottom,
+    #d71920 0%,
+    #d71920 33%,
+    #fcd116 33%,
+    #fcd116 66%,
+    #007a3d 66%,
+    #007a3d 100%
+  );
+  transform: skew(-12deg);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.35);
+}
+
+.logo-link {
+  text-decoration: none;
+  color: white;
+}
+
+.logo-link h1 {
+  margin: 0;
+  font-size: 44px;
+  letter-spacing: 10px;
+  font-family: Georgia, serif;
+  text-shadow: 2px 2px 3px #002d4f;
+}
+
+.logo-link p {
+  margin: 4px 0 0 0;
+  font-size: 18px;
+}
+
+.user-section {
+  text-align: left;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.user-section p {
+  margin: 2px 0;
+}
+
+@media (max-width: 768px) {
+  .banner {
+    height: auto;
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+
+  .brand-section {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .logo-link h1 {
+    font-size: 34px;
+  }
+
+  .user-section {
+    text-align: center;
+  }
 }

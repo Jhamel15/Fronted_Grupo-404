@@ -1,6 +1,8 @@
-import { Routes, Route, Navigate } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
+
 import Layout from './components/Layout/Layout'
 
+import Home from './pages/Home/Home'
 import Estado from './pages/Estado/Estado'
 import Meses from './pages/Meses/Meses'
 import Oficinas from './pages/Oficinas/Oficinas'
@@ -15,11 +17,15 @@ function App() {
   return (
     <Layout>
       <Routes>
-        <Route path="/" element={<Navigate to="/estado" />} />
+        <Route path="/" element={<Home />} />
+
         <Route path="/estado" element={<Estado />} />
         <Route path="/meses" element={<Meses />} />
         <Route path="/oficinas" element={<Oficinas />} />
-        <Route path="/organismos-financieros" element={<OrganismosFinancieros />} />
+        <Route
+          path="/organismos-financieros"
+          element={<OrganismosFinancieros />}
+        />
         <Route path="/usuarios" element={<Usuarios />} />
         <Route path="/tipos-baja" element={<TiposBaja />} />
         <Route path="/departamentos" element={<Departamentos />} />
