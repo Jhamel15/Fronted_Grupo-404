@@ -47,4 +47,4 @@ export const TiposBaja = () => {
   );
 };
 
-export default TiposBaja
+export default TiposBaja;
