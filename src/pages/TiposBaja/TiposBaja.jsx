@@ -46,7 +46,6 @@ function TiposDeBaja() {
             <th>ID</th>
             <th>Tipo</th>
             <th>Descripción</th>
-            
           </tr>
         </thead>
         <tbody>
