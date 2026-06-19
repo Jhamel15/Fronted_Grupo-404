@@ -19,37 +19,42 @@ function Oficinas() {
     <div className="oficinas-container">
 
       <div className="titulo-oficinas">
-    Tabla Oficinas
-</div>
+        ADMINISTRACIÓN DE OFICINAS
+      </div>
 
-    <div className="botones">
-    <button className="btn-nuevo">Nuevo</button>
-    <button className="btn-editar">Editar</button>
-    <button className="btn-eliminar">Eliminar</button>
-</div>
+      <div className="tabla-contenedor">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>OFICINA</th>
+              <th>DESCRIPCIÓN</th>
+            </tr>
+          </thead>
 
-      <table>
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>OFICINA</th>
-            <th>DESCRIPCIÓN</th>
-          </tr>
-        </thead>
+          <tbody>
+            {
+              oficinas.map((oficina) => (
+                <tr key={oficina.id}>
+                  <td>{oficina.id}</td>
+                  <td>{oficina.oficina}</td>
+                  <td>{oficina.descripcion}</td>
+                </tr>
+              ))
+            }
+          </tbody>
 
-        <tbody>
-          {
-            oficinas.map((oficina) => (
-              <tr key={oficina.id}>
-                <td>{oficina.id}</td>
-                <td>{oficina.oficina}</td>
-                <td>{oficina.descripcion}</td>
-              </tr>
-            ))
-          }
-        </tbody>
+        </table>
 
-      </table>
+        <div className="botones">
+          <button>Nuevo</button>
+          <button>Editar</button>
+          <button>Eliminar</button>
+          <button>Seleccionar</button>
+          <button>Salir</button>
+        </div>
+
+      </div>
 
     </div>
   )
