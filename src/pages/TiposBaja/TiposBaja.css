@@ -31,7 +31,6 @@
     flex-direction: column; 
     gap: 20px;
 }
-
 .contenedor-tabla-sistema {
     width: 100%;
 }
@@ -40,7 +39,6 @@
     border-collapse: collapse;
     border: 1px solid #002e62;
 }
-
 .tabla-sistema-azul th {
     background-color: #004b87;
     color: white;
@@ -66,7 +64,7 @@
 .btn-sistema-azul {
     background: linear-gradient(to bottom, #005a9c, #003366); 
     color: white;
-    border: 1px solid #002244; 
+    border: 1px solid #001427; 
     border-radius: 4px; 
     padding: 8px 22px;
     font-weight: bold;
