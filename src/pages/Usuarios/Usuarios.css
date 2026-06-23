@@ -1,0 +1,116 @@
+
+.baja-container {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f0f4f8;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+
+.sistema-header h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.subtitulo-sistema {
+  font-size: 14px;
+  color: #d0e0f0;
+}
+
+.baja-content {
+  padding: 30px;
+  max-width: 950px;
+}
+.modulo-banner {
+  background: linear-gradient(180deg, #254d7e 0%, #173052 100%);
+  color: #ffffff;
+  padding: 12px 20px;
+  border-radius: 4px;
+  margin-bottom: 25px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.modulo-banner h2 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-align: center;
+}
+.tabla-baja {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  margin-bottom: 25px;
+}
+
+.tabla-baja th {
+  background-color: #1e3a60;
+  color: #ffffff;
+  padding: 10px;
+  font-size: 13px;
+  font-weight: bold;
+  border: 1px solid #12253f;
+  text-align: center;
+}
+
+.col-id { width: 8%; }
+.col-user { width: 22%; }
+.col-nombre { width: 45%; }
+.col-rol { width: 25%; }
+
+.tabla-baja td {
+  padding: 10px;
+  border: 1px solid #b8c8d8;
+  font-size: 13px;
+  color: #222222;
+  text-align: center;
+}
+
+.tabla-baja td:nth-child(2),
+.tabla-baja td:nth-child(3) {
+  text-align: left;
+  padding-left: 15px;
+}
+
+.tabla-baja tbody tr:nth-child(even) {
+  background-color: #f7fafc;
+}
+
+.contenedor-botones-baja {
+  display: flex;
+  gap: 12px;
+}
+
+.contenedor-botones-baja button {
+  background-color: #2d128d; 
+  color: #f4f5f7;            
+  font-size: 13px;
+  font-weight: bold;
+  padding: 8px 22px;
+  min-width: 100px;          
+  text-align: center;
+  
+  border-top: 2px solid #ffffff;
+  border-left: 2px solid #ffffff;
+  border-right: 2px solid #5a7596;
+  border-bottom: 2px solid #5a7596;
+  
+  cursor: pointer;
+  outline: none;
+}
+
+.contenedor-botones-baja button:hover {
+  background-color: #c5daf2;
+}
+.contenedor-botones-baja button:active {
+  border-top: 2px solid #5a7596;
+  border-left: 2px solid #5a7596;
+  border-right: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+  padding-top: 9px;
+  padding-bottom: 7px;
+}
