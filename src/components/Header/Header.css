@@ -1,94 +1,65 @@
-.header {
-  width: 100%;
-}
-
-.top-bar {
-  background: #202020;
+.header-vsiaf {
+  background: linear-gradient(90deg, #00659c, #0077b6, #004c78);
   color: white;
-  font-weight: bold;
-  padding: 5px 10px;
-  font-size: 14px;
-}
-
-.banner {
-  height: 105px;
-  background: linear-gradient(135deg, #00518d, #0b75b7, #003b68);
+  padding: 22px 35px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 35px;
-  color: white;
-  border-bottom: 2px solid #9fc5e8;
+  border-bottom: 4px solid #d9edf7;
 }
 
-.brand-section {
+.header-left {
   display: flex;
   align-items: center;
-  gap: 25px;
+  gap: 22px;
 }
 
-.flag-shape {
-  width: 95px;
-  height: 55px;
-  background: linear-gradient(
-    to bottom,
-    #d71920 0%,
-    #d71920 33%,
-    #fcd116 33%,
-    #fcd116 66%,
-    #007a3d 66%,
-    #007a3d 100%
-  );
-  transform: skew(-12deg);
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.35);
+.bandera-bolivia {
+  width: 105px;
+  height: 65px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+  transform: skew(-8deg);
+  border: 2px solid rgba(255, 255, 255, 0.7);
 }
 
-.logo-link {
-  text-decoration: none;
-  color: white;
+.bandera-bolivia span {
+  display: block;
+  height: 33.33%;
 }
 
-.logo-link h1 {
+.rojo {
+  background: #d52b1e;
+}
+
+.amarillo {
+  background: #f9e300;
+}
+
+.verde {
+  background: #007934;
+}
+
+.header-left h1 {
+  font-size: 48px;
+  letter-spacing: 18px;
   margin: 0;
-  font-size: 44px;
-  letter-spacing: 10px;
   font-family: Georgia, serif;
-  text-shadow: 2px 2px 3px #002d4f;
+  text-shadow: 3px 3px 5px #002b4d;
 }
 
-.logo-link p {
-  margin: 4px 0 0 0;
+.header-left p {
+  margin: 5px 0 0;
   font-size: 18px;
 }
 
-.user-section {
+.header-right {
   text-align: left;
   font-size: 14px;
   line-height: 1.5;
 }
 
-.user-section p {
+.header-right p {
   margin: 2px 0;
-}
-
-@media (max-width: 768px) {
-  .banner {
-    height: auto;
-    flex-direction: column;
-    gap: 12px;
-    text-align: center;
-  }
-
-  .brand-section {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .logo-link h1 {
-    font-size: 34px;
-  }
-
-  .user-section {
-    text-align: center;
-  }
 }
