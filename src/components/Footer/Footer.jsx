@@ -16,6 +16,7 @@ function Footer() {
         Elva &nbsp; | &nbsp;
         Paola &nbsp; | &nbsp;
         Saúl &nbsp; | &nbsp;
+        Sebastian &nbsp; | &nbsp;
         Mario
       </div>
 
