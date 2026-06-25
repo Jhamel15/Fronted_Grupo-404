@@ -1,80 +1,115 @@
-
-.modulo-derecho {
-    width: 90%;
-    max-width: 850px;
-    margin: 20px auto;
-    font-family: Arial, sans-serif;
-}
-.titulo-seccion-afuera {
-    background: linear-gradient(to bottom, #1d5293, #002e62); /* Azul fuerte */
-    color: white;
-    padding: 12px;
-    text-align: center;
-    font-weight: bold;
-    border: 1px solid #002e62;
-    border-radius: 4px;
-    width: 100%;
-    margin: 10px 0 25px 0;
-    box-sizing: border-box;
+.baja-container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: sans-serif;
 }
 
-.titulo-seccion-afuera h2 {
-    margin: 0;
-    font-size: 1.4rem;
-    letter-spacing: 1px;
-}
-.caja-blanca-sistema {
-    background-color: #ffffff;
-    border: 2px solid #a6b9d0; 
-    padding: 25px;
-    display: flex;
-    flex-direction: column; 
-    gap: 20px;
-}
-.contenedor-tabla-sistema {
-    width: 100%;
-}
-.tabla-sistema-azul {
-    width: 100%;
-    border-collapse: collapse;
-    border: 1px solid #002e62;
-}
-.tabla-sistema-azul th {
-    background-color: #004b87;
-    color: white;
-    padding: 10px;
-    text-align: center;
-    border: 1px solid #002e62;
-    font-size: 0.9rem;
+.baja-title {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 15px;
 }
 
-.tabla-sistema-azul td {
-    padding: 10px;
-    text-align: center;
-    border: 1px solid #a6b9d0;
-    font-size: 0.9rem;
-    color: #000000;
+.baja-title h2 {
+  color: #ffffff;
+  font-size: 25px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
 }
-.panel-botones-horizontal {
-    display: flex;
-    flex-direction: row;
-    gap: 12px;           
-    justify-content: flex-start;
+
+.baja-card {
+  background: #ffffff;
+  padding: 25px;
+  border: 1px solid #4a90e2; 
+  width: 100%;
+  max-width: 900px;
+  box-sizing: border-box;
 }
-.btn-sistema-azul {
-    background: linear-gradient(to bottom, #005a9c, #003366); 
-    color: white;
-    border: 1px solid #001427; 
-    border-radius: 4px; 
-    padding: 8px 22px;
-    font-weight: bold;
-    font-size: 0.85rem;
-    cursor: pointer;
-    min-width: 100px;
-    text-align: center;
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); 
-    transition: background 0.2s;
+
+.baja-card input[type="text"] {
+  padding: 8px 12px;
+  border: 1px solid #999999;
+  border-radius: 4px;
+  font-size: 14px;
 }
-.btn-sistema-azul:hover {
-    background: linear-gradient(to bottom, #004488, #002244);
+
+.baja-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #777777;
+  margin-bottom: 25px;
+  background-color: #ffffff;
+}
+
+.baja-table th {
+  background-color: #004080;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #777777;
+  text-align: center;
+}
+
+.baja-table td {
+  border: 1px solid #777777;
+  padding: 8px 12px;
+  font-size: 14px;
+  color: #000000;
+  text-align: center;
+}
+
+.baja-table tbody tr {
+  cursor: pointer;
+}
+
+.baja-table tbody tr:hover {
+  background-color: #a5cfdb !important;
+}
+
+.baja-table tbody tr.baja-fila-seleccionada {
+  background-color: #b7d9f2 !important;
+}
+
+.baja-table tbody tr.baja-fila-seleccionada:hover {
+  background-color: #b7d9f2 !important;
+}
+
+.baja-actions-container {
+  width: 100%;
+  border: 1px solid #a3c4f3; 
+  border-radius: 12px; 
+  padding: 15px 0;
+  display: flex;
+  justify-content: center;
+  background-color: #ffffff;
+}
+
+.baja-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.btn-baja {
+  background: linear-gradient(to bottom, #3494e6, #1d6fa5);
+  color: #ffffff ;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
+  padding: 8px 24px;
+  border: 2px solid #08305e ;
+ border-radius: 0px ;
+ cursor: pointer ;
+  font-weight: bold ;
+  font-size: 13px;
+  box-shadow: inset 0 1px 0 rgba(104, 135, 223, 0.4), 0 2px 4px rgba(0,0,0,0.15);
+  min-width: 110px;
+  text-align: center;
+  transition: all 0.1s ease;
+}
+
+.btn-baja:hover {
+  background: linear-gradient(to bottom, #2c82cc, #175b8a) ;
+  box-shadow: inset 0 1px 0 rgba(158, 215, 241, 0.4), 0 4px 8px rgba(0,0,0,0.2); 
 }
