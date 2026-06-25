@@ -4,31 +4,23 @@ function Footer() {
   return (
     <footer className="footer">
 
-      <div className="footer-superior">
-        <span>V.S.I.A.F - Sistema de Activos Fijos</span>
+      <div className="footer-logo">
+        V.S.I.A.F
+        <span>Sistema de Activos Fijos</span>
       </div>
 
-      <div className="footer-centro">
-
-        <div className="footer-grupo">
-          <strong>GRUPO 404</strong>
-        </div>
-
-        <div className="footer-linea"></div>
-
-        <div className="footer-integrantes">
-          <span>Jhamel</span>
-          <span>Magaly</span>
-          <span>Elva</span>
-          <span>Paola</span>
-          <span>Saúl</span>
-          <span>Mario</span>
-        </div>
-
+      <div className="footer-nombres">
+        Grupo 404 &nbsp; | &nbsp;
+        Jhamel &nbsp; | &nbsp;
+        Magaly &nbsp; | &nbsp;
+        Elva &nbsp; | &nbsp;
+        Paola &nbsp; | &nbsp;
+        Saúl &nbsp; | &nbsp;
+        Mario
       </div>
 
-      <div className="footer-inferior">
-        © 2026 - Universidad Autónoma Tomás Frías | Ingeniería de Sistemas
+      <div className="footer-copy">
+        © 2026 • Universidad Autónoma Tomás Frías
       </div>
 
     </footer>
