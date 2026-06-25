@@ -1,0 +1,57 @@
+.footer{
+
+    background:linear-gradient(#015b93,#003e69);
+
+    color:white;
+
+    text-align:center;
+
+    padding:10px 0 8px;
+
+    border-top:3px solid #69c6ff;
+
+}
+
+.footer-logo{
+
+    font-size:20px;
+
+    font-weight:bold;
+
+    letter-spacing:3px;
+
+}
+
+.footer-logo span{
+
+    display:block;
+
+    font-size:13px;
+
+    margin-top:3px;
+
+    letter-spacing:1px;
+
+    color:#d7edf8;
+
+}
+
+.footer-nombres{
+
+    margin-top:10px;
+
+    font-size:13px;
+
+    font-weight:bold;
+
+}
+
+.footer-copy{
+
+    margin-top:8px;
+
+    font-size:11px;
+
+    color:#d4eaf8;
+
+}

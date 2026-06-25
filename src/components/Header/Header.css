@@ -1,0 +1,65 @@
+.header-vsiaf {
+  background: linear-gradient(90deg, #00659c, #0077b6, #004c78);
+  color: white;
+  padding: 22px 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 4px solid #d9edf7;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.bandera-bolivia {
+  width: 105px;
+  height: 65px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+  transform: skew(-8deg);
+  border: 2px solid rgba(255, 255, 255, 0.7);
+}
+
+.bandera-bolivia span {
+  display: block;
+  height: 33.33%;
+}
+
+.rojo {
+  background: #d52b1e;
+}
+
+.amarillo {
+  background: #f9e300;
+}
+
+.verde {
+  background: #007934;
+}
+
+.header-left h1 {
+  font-size: 48px;
+  letter-spacing: 18px;
+  margin: 0;
+  font-family: Georgia, serif;
+  text-shadow: 3px 3px 5px #002b4d;
+}
+
+.header-left p {
+  margin: 5px 0 0;
+  font-size: 18px;
+}
+
+.header-right {
+  text-align: left;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.header-right p {
+  margin: 2px 0;
+}

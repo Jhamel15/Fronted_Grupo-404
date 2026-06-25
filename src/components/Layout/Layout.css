@@ -1,0 +1,26 @@
+.layout-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-container {
+  display: flex;
+  flex: 1;
+}
+
+.content {
+  flex: 1;
+  background: white;
+  margin: 0;
+  padding: 20px;
+}
+
+.content h2 {
+  background: linear-gradient(#4b9bd0, #00528c);
+  color: white;
+  text-align: center;
+  padding: 12px;
+  margin-top: 0;
+  border: 1px solid #333;
+}

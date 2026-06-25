@@ -1,0 +1,22 @@
+.home-container {
+  min-height: 650px;
+
+  background:
+    linear-gradient(
+      rgba(220, 240, 255, 0.65),
+      rgba(4, 83, 138, 0.35)
+    ),
+    url('../../assets/images/fondo-vsiaf.jpg');
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  border: 1px solid #8db9dc;
+}
+
+@media (max-width: 768px) {
+  .home-container {
+    min-height: 500px;
+  }
+}
