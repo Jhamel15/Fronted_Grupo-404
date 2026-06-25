@@ -1,0 +1,87 @@
+.organismos-container {
+  padding: 30px;
+}
+
+.organismos-title {
+  background: linear-gradient(#2f91c9, #07578e);
+  color: white;
+  text-align: center;
+  padding: 12px;
+  border: 1px solid #003f6b;
+  margin-bottom: 25px;
+}
+
+.organismos-title h2 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.organismos-card {
+  background: #f8fbfd;
+  padding: 20px;
+  border: 1px solid #2b70a8;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+}
+
+.organismos-form {
+  display: grid;
+  grid-template-columns: 120px 160px 1fr 120px;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.organismos-form input {
+  padding: 8px;
+  border: 1px solid #777;
+}
+
+.organismos-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 18px;
+  background: white;
+}
+
+.organismos-table th {
+  background: #005486;
+  color: white;
+  padding: 9px;
+  border: 1px solid #333;
+}
+
+.organismos-table td {
+  padding: 8px;
+  border: 1px solid #777;
+  text-align: center;
+}
+
+.organismos-table tbody tr:nth-child(even) {
+  background: #e6f0f7;
+}
+
+.organismos-table tbody tr:hover {
+  background: #c9e4f7;
+}
+
+.organismos-actions {
+  border: 1px solid #2b70a8;
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  background: #eef7fd;
+}
+
+.btn {
+  background: linear-gradient(#2f91c9, #07578e);
+  color: white;
+  border: 1px solid #003f6b;
+  padding: 8px 25px;
+  font-weight: bold;
+  cursor: pointer;
+  min-width: 100px;
+}
+
+.btn:hover {
+  background: linear-gradient(#07578e, #003f6b);
+}
