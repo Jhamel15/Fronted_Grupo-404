@@ -1,114 +1,177 @@
-import React, { useState } from 'react';
-import './Usuarios.css';
+import { useEffect, useState } from "react";
+import "./Usuarios.css";
+
+const API_URL = import.meta.env.VITE_API_URL;
 
 function Usuarios() {
-  // Volvemos a la lista original de usuarios
-  const [usuarios, setUsuarios] = useState([
-    {
-      id: 1,
-      usuario: 'Carla',
-      nombre: 'Mamani Condori',
-      rol: 'Comunicador'
-    },
-    {
-      id: 2,
-      usuario: 'Daniela',
-      nombre: 'Coro Gamboa',
-      rol: 'Lider'
-    },
-    {
-      id: 3,
-      usuario: 'Juan',
-      nombre: 'Cruz Ramos',
-      rol: 'Operador'
+  const [usuarios, setUsuarios] = useState([]);
+  const [nombre, setNombre] = useState("");
+  const [correo, setCorreo] = useState("");
+  const [password, setPassword] = useState("");
+  const [seleccionado, setSeleccionado] = useState(null);
+
+  const cargarUsuarios = async () => {
+    try {
+      const res = await fetch(`${API_URL}/api/usuarios`);
+      const data = await res.json();
+      setUsuarios(data);
+    } catch (error) {
+      console.error("Error al cargar usuarios:", error);
+      alert("No se pudo conectar con el backend");
     }
-  ]);
-
-  const nuevoUsuario = () => {
-    const usuario = prompt('Ingrese el usuario:');
-    const nombre = prompt('Ingrese el nombre completo:');
-    const rol = prompt('Ingrese el rol:');
-
-    if (!usuario || !nombre || !rol) return;
-
-    setUsuarios([
-      ...usuarios,
-      {
-        id: usuarios.length + 1,
-        usuario,
-        nombre,
-        rol
-      }
-    ]);
   };
 
-  const editarUsuario = () => {
-    const id = Number(prompt('Ingrese el ID a editar:'));
-    if (!id) return;
+  useEffect(() => {
+    cargarUsuarios();
+  }, []);
 
-    const nuevosUsuarios = usuarios.map((u) => {
-      if (u.id === id) {
-        const txtUsuario = prompt('Nuevo usuario:', u.usuario);
-        const txtNombre = prompt('Nuevo nombre:', u.nombre);
-        const txtRol = prompt('Nuevo rol:', u.rol);
+  const limpiar = () => {
+    setNombre("");
+    setCorreo("");
+    setPassword("");
+    setSeleccionado(null);
+  };
 
-        return {
-          ...u,
-          usuario: txtUsuario || u.usuario,
-          nombre: txtNombre || u.nombre,
-          rol: txtRol || u.rol,
-        };
-      }
-      return u;
+  const seleccionar = (usuario) => {
+    setSeleccionado(usuario);
+    setNombre(usuario.nombre ?? "");
+    setCorreo(usuario.correo ?? "");
+    setPassword(usuario.password ?? "");
+  };
+
+  const nuevo = async () => {
+    if (!nombre.trim() || !correo.trim() || !password.trim()) {
+      alert("Complete todos los campos");
+      return;
+    }
+
+    await fetch(`${API_URL}/api/usuarios`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        nombre,
+        correo,
+        password,
+      }),
     });
 
-    setUsuarios(nuevosUsuarios);
+    limpiar();
+    cargarUsuarios();
   };
 
-  const eliminarUsuario = () => {
-    const id = Number(prompt('Ingrese el ID a eliminar:'));
-    if (!id) return;
+  const editar = async () => {
+    if (!seleccionado) {
+      alert("Seleccione un usuario");
+      return;
+    }
 
-    setUsuarios(
-      usuarios.filter((u) => u.id !== id)
-    );
+    await fetch(`${API_URL}/api/usuarios/${seleccionado.codusuario}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        nombre,
+        correo,
+        password,
+      }),
+    });
+
+    limpiar();
+    cargarUsuarios();
+  };
+
+  const eliminar = async () => {
+    if (!seleccionado) {
+      alert("Seleccione un usuario");
+      return;
+    }
+
+    const confirmar = window.confirm("¿Está seguro de eliminar este usuario?");
+    if (!confirmar) return;
+
+    await fetch(`${API_URL}/api/usuarios/${seleccionado.codusuario}`, {
+      method: "DELETE",
+    });
+
+    limpiar();
+    cargarUsuarios();
   };
 
   return (
-      <div className="baja-content">
-        <div className="modulo-banner">
-          <h2>ADMINISTRACIÓN DE USUARIOS</h2>
+    <div className="usuarios-container">
+      <div className="usuarios-title">
+        <h2>ADMINISTRACIÓN DE USUARIOS</h2>
+      </div>
+
+      <div className="usuarios-card">
+        <div className="usuarios-form">
+          <input
+            type="text"
+            placeholder="Nombre del usuario"
+            value={nombre}
+            onChange={(e) => setNombre(e.target.value)}
+          />
+
+          <input
+            type="email"
+            placeholder="Correo electrónico"
+            value={correo}
+            onChange={(e) => setCorreo(e.target.value)}
+          />
+
+          <input
+            type="password"
+            placeholder="Contraseña"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
         </div>
 
-        {/* Estructura de la tabla adaptada a Usuarios */}
-        <table className="tabla-baja">
+        <table className="usuarios-table">
           <thead>
             <tr>
-              <th className="col-id">ID</th>
-              <th className="col-user">USUARIO</th>
-              <th className="col-nombre">NOMBRE COMPLETO</th>
-              <th className="col-rol">ROL</th>
+              <th>ID</th>
+              <th>NOMBRE</th>
+              <th>CORREO</th>
+              <th>CONTRASEÑA</th>
             </tr>
           </thead>
+
           <tbody>
-            {usuarios.map((item) => (
-              <tr key={item.id}>
-                <td>{item.id}</td>
-                <td>{item.usuario}</td>
-                <td>{item.nombre}</td>
-                <td>{item.rol}</td>
+            {usuarios.map((usuario) => (
+              <tr
+                key={usuario.codusuario}
+                onClick={() => seleccionar(usuario)}
+                style={{
+                  cursor: "pointer",
+                  backgroundColor:
+                    seleccionado?.codusuario === usuario.codusuario
+                      ? "#b7d9f2"
+                      : "",
+                }}
+              >
+                <td>{usuario.codusuario}</td>
+                <td>{usuario.nombre}</td>
+                <td>{usuario.correo}</td>
+                <td>{usuario.password}</td>
               </tr>
             ))}
           </tbody>
         </table>
 
-        <div className="contenedor-botones-baja">
-          <button type="button" onClick={nuevoUsuario}>Nuevo</button>
-          <button type="button" onClick={editarUsuario}>Editar</button>
-          <button type="button" onClick={eliminarUsuario}>Eliminar</button>
+        <div className="usuarios-actions">
+          <button className="btn" onClick={nuevo}>Nuevo</button>
+          <button className="btn" onClick={editar}>Editar</button>
+          <button className="btn" onClick={eliminar}>Eliminar</button>
+          <button className="btn" onClick={limpiar}>Seleccionar</button>
+          <button className="btn" onClick={limpiar}>Salir</button>
         </div>
       </div>
+    </div>
   );
 }
 
-export default Usuarios
+export default Usuarios;
