@@ -1,0 +1,88 @@
+.departamentos-container {
+  padding: 30px;
+}
+
+.departamentos-title {
+  background: linear-gradient(#2f91c9, #07578e);
+  color: white;
+  text-align: center;
+  padding: 12px;
+  border: 1px solid #003f6b;
+  margin-bottom: 25px;
+}
+
+.departamentos-title h2 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.departamentos-card {
+  background: #f8fbfd;
+  padding: 20px;
+  border: 1px solid #2b70a8;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+}
+
+.departamentos-form {
+  display: grid;
+  grid-template-columns: 90px 160px 1fr 120px;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.departamentos-form input {
+  padding: 8px;
+  border: 1px solid #777;
+}
+
+.departamentos-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 18px;
+  background: white;
+}
+
+.departamentos-table th {
+  background: #005486;
+  color: white;
+  padding: 9px;
+  border: 1px solid #333;
+}
+
+.departamentos-table td {
+  padding: 8px;
+  border: 1px solid #777;
+  text-align: center;
+}
+
+.departamentos-table tbody tr:nth-child(even) {
+  background: #e6f0f7;
+}
+
+.departamentos-table tbody tr:hover {
+  background: #c9e4f7;
+}
+
+.departamentos-actions {
+  border: 1px solid #2b70a8;
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  background: #eef7fd;
+  flex-wrap: wrap;
+}
+
+.btn {
+  background: linear-gradient(#2f91c9, #07578e);
+  color: white;
+  border: 1px solid #003f6b;
+  padding: 8px 25px;
+  font-weight: bold;
+  cursor: pointer;
+  min-width: 100px;
+}
+
+.btn:hover {
+  background: linear-gradient(#07578e, #003f6b);
+}
