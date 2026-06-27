@@ -2,9 +2,7 @@ import './Home.css'
 
 function Home() {
   return (
-    <section className="home-container">
-
-    </section>
+    <section className="home-container"></section>
   )
 }
 

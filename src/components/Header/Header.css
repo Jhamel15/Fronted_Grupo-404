@@ -3,7 +3,6 @@
   color: white;
   padding: 22px 35px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   border-bottom: 4px solid #d9edf7;
 }
@@ -52,14 +51,4 @@
 .header-left p {
   margin: 5px 0 0;
   font-size: 18px;
-}
-
-.header-right {
-  text-align: left;
-  font-size: 14px;
-  line-height: 1.5;
-}
-
-.header-right p {
-  margin: 2px 0;
 }

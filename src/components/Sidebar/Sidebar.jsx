@@ -6,6 +6,7 @@ function Sidebar() {
     <aside className="sidebar">
       <h2>MENU PRINCIPAL</h2>
 
+      <Link to="/">Inicio</Link>
       <Link to="/estado">Estado</Link>
       <Link to="/meses">Meses</Link>
       <Link to="/oficinas">Oficinas</Link>

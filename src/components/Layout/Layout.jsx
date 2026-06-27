@@ -11,8 +11,23 @@ function Layout({ children }) {
       <div className="main-container">
         <Sidebar />
 
-        <main className="content">
-          {children}
+        <main className="content-area">
+          <div className="datos-sistema">
+            <div className="dato-linea">
+              <strong>ENTIDAD:</strong>
+              <span>0025</span>
+              <span>Ministerio de la Presidencia</span>
+            </div>
+
+            <div className="dato-linea">
+              <strong>UNIDAD:</strong>
+              <span>0</span>
+            </div>
+          </div>
+
+          <div className="content">
+            {children}
+          </div>
         </main>
       </div>
 

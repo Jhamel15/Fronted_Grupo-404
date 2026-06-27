@@ -15,12 +15,6 @@ function Header() {
           <p>Sistema de Activos Fijos</p>
         </div>
       </div>
-
-      <div className="header-right">
-        <p><strong>USUARIO:</strong> admin</p>
-        <p><strong>ROL:</strong> Administrador</p>
-        <p><strong>BACKUPS:</strong> Ninguno</p>
-      </div>
     </header>
   );
 }
